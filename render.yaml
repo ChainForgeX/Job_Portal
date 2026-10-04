@@ -1,0 +1,25 @@
+services:
+  - type: web
+    name: talvora-api
+    runtime: node
+    rootDir: backend
+    buildCommand: npm ci
+    startCommand: npm start
+    envVars:
+      - key: MONGO_URI
+        sync: false
+      - key: JWT_SECRET
+        sync: false
+      - key: CLOUDINARY_CLOUD_NAME
+        sync: false
+      - key: CLOUDINARY_API_KEY
+        sync: false
+      - key: CLOUDINARY_API_SECRET
+        sync: false
+
+  - type: web
+    name: talvora-frontend
+    runtime: static
+    rootDir: frontend
+    buildCommand: ''
+    staticPublishPath: .

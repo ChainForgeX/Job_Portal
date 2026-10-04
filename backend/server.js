@@ -28,7 +28,7 @@ app.get("/", (req, res)=>{
     res.send("Job Portal API Running");
 });
 
-const PORT = 5005;
+const PORT = process.env.PORT || 5005;
 
 app.listen(PORT, ()=>{
     console.log(`Server Running on Port ${PORT}`);

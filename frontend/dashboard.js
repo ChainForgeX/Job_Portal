@@ -1,4 +1,7 @@
-const API_BASE = localStorage.getItem('jobPortalApi') || 'http://localhost:5005/api';
+const defaultApiBase = ['localhost', '127.0.0.1'].includes(window.location.hostname)
+    ? 'http://localhost:5005/api'
+    : 'https://talvora-api.onrender.com/api';
+const API_BASE = localStorage.getItem('jobPortalApi') || defaultApiBase;
 const token = localStorage.getItem('jobPortalToken');
 const role = localStorage.getItem('jobPortalRole');
 const content = document.querySelector('#dashboard-content');
