@@ -1,20 +1,22 @@
 const dotenv = require("dotenv");
 dotenv.config();
-const connectDB = require("./config/db");
+const connectDB = require("./db");
 const express = require("express");
 const cors = require("cors");
+const path = require("path");
 const app = express();
-const authRoutes = require("./routes/authRoutes");
-const companyRoutes = require("./routes/companyRoutes");
-const jobRoutes = require("./routes/jobRoutes");
-const applicationRoutes = require("./routes/applicationRoutes");
-const dashboardRoutes = require("./routes/dashboardRoutes");
-const userRoutes = require("./routes/userRoutes");
+const authRoutes = require("./authRoutes");
+const companyRoutes = require("./companyRoutes");
+const jobRoutes = require("./jobRoutes");
+const applicationRoutes = require("./applicationRoutes");
+const dashboardRoutes = require("./dashboardRoutes");
+const userRoutes = require("./userRoutes");
 
 connectDB();
 
 app.use(cors());
 app.use(express.json());
+app.use("/uploads", express.static(path.join(__dirname, "uploads")));
 app.use("/api/auth", authRoutes);
 app.use("/api/company", companyRoutes);
 app.use("/api/jobs", jobRoutes);

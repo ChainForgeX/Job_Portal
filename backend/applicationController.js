@@ -1,5 +1,5 @@
-const Application = require("../models/Application");
-const Job = require("../models/Job");
+const Application = require("./Application");
+const Job = require("./Job");
 const applyJob = async(req, res)=>{
     try{
         if(req.user.role != "candidate"){

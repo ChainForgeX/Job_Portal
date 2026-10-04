@@ -1,6 +1,6 @@
-const Job = require("../models/Job");
-const Company = require("../models/Company");
-const Application = require("../models/Application");
+const Job = require("./Job");
+const Company = require("./Company");
+const Application = require("./Application");
 const createJob = async(req, res)=>{
     try{
         const {title, description, salary, location, jobType, experience, skills, company} = req.body;

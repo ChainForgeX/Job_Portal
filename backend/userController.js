@@ -1,4 +1,5 @@
-const User = require("../models/User");
+const User = require("./User");
+const cloudinary = require("./cloudinary");
 const crypto = require("crypto");
 const bcrypt = require("bcryptjs");
 const getProfile = async(req, res)=>{

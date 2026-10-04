@@ -1,8 +1,8 @@
 const express = require("express");
 const router = express.Router();
-const {applyJob, getMyApplications, getApplicationsForEmployer, updateApplicationStatus, withdrawApplication} = require("../controllers/applicationController");
-const protect = require("../middleware/protect");
-const createUpload = require("../middleware/uploadFactory");
+const {applyJob, getMyApplications, getApplicationsForEmployer, updateApplicationStatus, withdrawApplication} = require("./applicationController");
+const protect = require("./protect");
+const createUpload = require("./uploadFactory");
 const resumeUpload = createUpload(
     "job-portal/resumes",
     ["pdf", "doc", "docx"],

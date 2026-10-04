@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Talvora | Where Talent Meets Opportunity</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="topbar">
+    <a class="brand" href="#jobs"><img class="brand-logo" src="talvora-logo.png" alt="Talvora - Where Talent Meets Opportunity"></a>
+    <nav class="nav-links" aria-label="Primary navigation">
+      <a href="#jobs">Find work</a>
+      <a href="dashboard.html">Dashboard</a>
+    </nav>
+    <div id="account-actions" class="account-actions"><button class="button button-ghost" data-action="open-auth">Sign in</button><button class="button button-dark" data-action="open-auth">Get started</button></div>
+  </header>
+
+  <main>
+    <section class="hero" id="jobs">
+      <div class="hero-copy"><p class="eyebrow">THE WORK, WORTH FINDING</p><h1>Make your next move<br><em>matter.</em></h1><p class="hero-text">A sharper way to connect ambitious people with teams building what is next.</p></div>
+      <div class="search-panel"><div class="search-field"><span>⌕</span><input id="keyword" type="search" placeholder="Job title or keyword"></div><div class="search-field"><span>⌖</span><input id="location" type="search" placeholder="City or remote"></div><select id="job-type"><option value="">All job types</option><option>Full Time</option><option>Part Time</option><option>Internship</option><option>Contract</option></select><button class="button button-accent" data-action="search">Search roles</button></div>
+      <div class="hero-note"><span class="pulse"></span><span id="job-count">Loading open roles...</span><span class="note-rule"></span><span>Built for people in motion</span></div>
+    </section>
+
+    <section class="content-wrap">
+      <div class="section-heading"><div><p class="eyebrow">CURATED FOR YOU</p><h2>Open roles</h2></div><button class="text-button" data-action="refresh">Refresh listings ↗</button></div>
+      <div id="notice" class="notice" hidden></div>
+      <div id="job-list" class="job-list"></div>
+    </section>
+
+  </main>
+
+  <div id="auth-modal" class="modal" hidden><div class="modal-card"><button class="modal-close" data-action="close-auth" aria-label="Close">×</button><p class="eyebrow">WELCOME TO TALVORA</p><h2 id="auth-title">Sign in</h2><p id="auth-subtitle" class="muted">Pick up where you left off.</p><form id="auth-form"><div id="name-field" class="form-field" hidden><label for="name">Full name</label><input id="name" name="name" type="text"></div><div class="form-field"><label for="email">Email</label><input id="email" name="email" type="email" required></div><div class="form-field"><label for="password">Password</label><input id="password" name="password" type="password" required></div><div id="role-field" class="form-field" hidden><label for="role">I am here to</label><select id="role" name="role"><option value="candidate">Find my next role</option><option value="employer">Build my team</option></select></div><button class="button button-accent button-wide" type="submit" id="auth-submit">Sign in</button></form><button class="switch-auth" data-action="toggle-auth">Need an account? Create one</button></div></div>
+
+  <div id="apply-modal" class="modal" hidden><div class="modal-card"><button class="modal-close" data-action="close-apply" aria-label="Close">×</button><p class="eyebrow">MAKE IT REAL</p><h2>Apply for this role</h2><p id="apply-job-title" class="muted"></p><form id="apply-form"><div class="form-field"><label for="resume">Resume (PDF, DOC, DOCX)</label><input id="resume" name="resume" type="file" accept=".pdf,.doc,.docx" required></div><div class="form-field"><label for="cover-letter">A note to the team <span>(optional)</span></label><textarea id="cover-letter" name="coverLetter" rows="4" placeholder="What makes this opportunity a strong match?"></textarea></div><button class="button button-accent button-wide" type="submit">Send application</button></form></div></div>
+  <script src="app.js"></script>
+</body>
+</html>

@@ -1,9 +1,8 @@
 const express = require("express");
 const router = express.Router();
-const {createCompany, getMyCompanies, updateCompany, deleteCompany} = require("../controllers/companyController");
-const protect = require("../middleware/protect");
-const uploadFactory = require("../middleware/uploadFactory");
-const createUpload = require("../middleware/uploadFactory");
+const {createCompany, getMyCompanies, updateCompany, deleteCompany} = require("./companyController");
+const protect = require("./protect");
+const createUpload = require("./uploadFactory");
 const logoUpload = createUpload(
     "job-portal/logos",
     ["jpg", "jpeg", "png", "webp"],

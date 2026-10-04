@@ -1,0 +1,16 @@
+# Runtime secrets
+.env
+backend/.env
+
+# Dependencies
+node_modules/
+backend/node_modules/
+
+# Local upload fallback data
+backend/uploads/
+
+# macOS metadata
+.DS_Store
+
+# Original attachment copy; the app asset lives in frontend/
+/Talvora_*.png

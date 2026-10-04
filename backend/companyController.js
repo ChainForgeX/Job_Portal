@@ -1,5 +1,5 @@
-const Company = require("../models/Company");
-const cloudinary = require("../config/cloudinary");
+const Company = require("./Company");
+const cloudinary = require("./cloudinary");
 const createCompany = async(req, res)=>{
     try{
         const {companyname, description, website, location} = req.body;

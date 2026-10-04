@@ -113,25 +113,17 @@ Built with the **MERN Stack** and **Cloudinary** for cloud-based file management
 ```bash
 Job-Portal/
 │
-├── config/
-│   ├── db.js                   # MongoDB connection
-│   └── cloudinary.js           # Cloudinary configuration
+├── backend/                    # Express API, routes, controllers, models, and config
+│   ├── server.js
+│   ├── package.json
+│   └── .env
 │
-├── controllers/                # Route handler logic (auth, users, companies, jobs, applications)
+├── frontend/                   # Browser client for candidates and employers
+│   ├── index.html
+│   ├── styles.css
+│   └── app.js
 │
-├── middleware/
-│   ├── protect.js              # JWT auth middleware
-│   └── uploadFactory.js        # Multer + Cloudinary upload factory
-│
-├── models/                     # Mongoose schemas (User, Company, Job, Application)
-│
-├── routes/                     # Express route definitions per module
-│
-├── utils/                      # Helper utilities (email, token, error handling)
-│
-├── server.js
-├── .env
-└── package.json
+└── README.md
 ```
 
 ---
@@ -253,13 +245,14 @@ Files are processed by **Multer** in-memory before being streamed to Cloudinary 
 git clone https://github.com/Jeevan9898/job-portal.git
 cd job-portal
 
-# Install dependencies
+# Install backend dependencies
+cd backend
 npm install
 ```
 
 ### Environment Variables
 
-Create a `.env` file in the project root:
+Create a `.env` file inside `backend/`:
 
 ```env
 MONGO_URI=your_mongodb_connection_string
@@ -275,6 +268,8 @@ CLOUDINARY_API_SECRET=your_cloudinary_api_secret
 ```bash
 npm run dev
 ```
+
+Open `frontend/index.html` in a browser after the API is running.
 
 ---
 

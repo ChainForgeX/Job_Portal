@@ -1,7 +1,7 @@
 const mongoose = require("mongoose");
-const Company = require("../models/Company");
-const Job = require("../models/Job");
-const Application = require("../models/Application");
+const Company = require("./Company");
+const Job = require("./Job");
+const Application = require("./Application");
 const getEmployerDashboard = async(req, res)=>{
     try{
         const totalCompanies = await Company.countDocuments({owner : req.user.id});

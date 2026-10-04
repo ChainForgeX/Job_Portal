@@ -1,8 +1,8 @@
 const express = require("express");
 const router = express.Router();
-const {getProfile, updateProfile, updateProfilePicture, forgotPassword, resetPassword} = require("../controllers/userController");
-const protect = require("../middleware/protect");
-const createUpload = require("../middleware/uploadFactory");
+const {getProfile, updateProfile, updateProfilePicture, forgotPassword, resetPassword} = require("./userController");
+const protect = require("./protect");
+const createUpload = require("./uploadFactory");
 const profileUpload = createUpload(
     "job-portal/profile-pictures",
     ["jpg", "jpeg", "png", "webp"],

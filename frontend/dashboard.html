@@ -1,0 +1,25 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Talvora | Dashboard</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body class="dashboard-page">
+  <header class="topbar">
+    <a class="brand" href="index.html"><img class="brand-logo" src="talvora-logo.png" alt="Talvora - Where Talent Meets Opportunity"></a>
+    <nav class="nav-links" aria-label="Primary navigation"><a href="index.html">Find work</a><a class="active-link" href="dashboard.html">Dashboard</a></nav>
+    <div class="account-actions"><button class="button button-ghost" id="logout-button">Log out</button></div>
+  </header>
+  <main class="dashboard-page-main">
+    <div class="dashboard-page-heading"><div><p class="eyebrow">YOUR TALVORA</p><h1>Keep momentum<br><em>visible.</em></h1></div><a class="button button-dark" href="index.html">Browse roles</a></div>
+    <div id="dashboard-notice" class="notice" hidden></div>
+    <section id="dashboard-content" class="dashboard-page-content"><div class="dashboard-empty"><span class="empty-number">01</span><p>Loading your dashboard...</p></div></section>
+  </main>
+  <script src="dashboard.js"></script>
+</body>
+</html>
