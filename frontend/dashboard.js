@@ -1,6 +1,6 @@
 const defaultApiBase = ['localhost', '127.0.0.1'].includes(window.location.hostname)
     ? 'http://localhost:5005/api'
-    : 'https://job-portal-ej4z.onrender.com/api';
+    : 'https://job-portal-1-qucg.onrender.com/api';
 const API_BASE = localStorage.getItem('jobPortalApi') || defaultApiBase;
 const token = localStorage.getItem('jobPortalToken');
 const role = localStorage.getItem('jobPortalRole');
